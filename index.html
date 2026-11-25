@@ -1,0 +1,98 @@
+<!doctype html>
+<html lang="ko"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>2026학년도 창원캠퍼스 교육과정</title>
+<style>
+:root{font-family:"Work Sans","Malgun Gothic",sans-serif;color:#182924;background:#f7f9f7;font-size:16px}*{box-sizing:border-box}body{margin:0}main{max-width:840px;margin:0 auto;padding:36px 20px 60px}header{display:flex;justify-content:space-between;align-items:center;gap:16px;margin-bottom:24px}h1{font-size:clamp(22px,4vw,32px);letter-spacing:-.05em;margin:0}a{color:#17644c}section,details.panel{background:white;border:1px solid #d6dfd8;border-radius:12px;padding:20px;margin-bottom:16px}form{margin:0}textarea,select,input[type=number],input[type=file]{font:inherit;border:1px solid #becec4;border-radius:6px;padding:8px;width:100%;background:white;color:inherit}textarea{resize:vertical;min-height:75px}.bar{display:flex;justify-content:space-between;align-items:center;gap:12px;margin-top:10px}.status{font-size:.9rem;color:#56695e}button{font:inherit;font-weight:650;background:#18583d;color:white;border:0;border-radius:7px;padding:10px 16px;cursor:pointer}button:disabled{opacity:.5}summary{font-weight:650;cursor:pointer}.answer{line-height:1.65;white-space:pre-wrap;overflow-wrap:anywhere}.turn{border-top:1px solid #e1e8e2;padding:16px 0}.turn h3{margin:0 0 10px;font-size:1rem}.refs{display:flex;flex-wrap:wrap;gap:12px;font-size:.88rem}.grid{margin:16px 0;display:grid;gap:12px;grid-template-columns:repeat(auto-fit,minmax(145px,1fr))}label{display:block;font-size:.9rem}label select,label input{margin-top:5px}label.check{display:inline-block;margin:6px 12px 6px 0}.scroll{overflow:auto}table{border-collapse:collapse;font-size:.88rem;width:100%;margin:12px 0}td,th{text-align:left;padding:8px;border-bottom:1px solid #dde5dd;vertical-align:top}th{background:#f2f6f3}.fail{color:#932e1f}.review{color:#7e560d}.ok{color:#18583d}#chatlog:empty{display:none}
+.answer.formatted{white-space:normal;line-height:1.7;word-break:keep-all}.answer.formatted p,.answer.formatted ul,.answer.formatted ol,.answer.formatted pre{margin:.55em 0}.answer.formatted h4{font-size:1rem;margin:1em 0 .25em}.answer.formatted>:first-child{margin-top:0}.answer.formatted ul,.answer.formatted ol{padding-inline-start:1.5em}.answer.formatted li+li{margin-top:.22em}.answer.formatted code{font-size:.9em}.answer.formatted pre{white-space:pre-wrap;padding:.65em;background:#f2f6f3;border-radius:5px}.turn-notice{margin:.35em 0;color:#7b4c25;font-size:.9rem}
+.chat-tools{display:flex;justify-content:flex-end}.chat-tools button{background:white;border:1px solid #becec4;color:#18583d;padding:5px 11px;font-size:.9rem}#archives details{margin:.5em 0;font-size:.93rem}
+</style><meta name="cwnu-api" content="https://olive-finalize-bartender.ngrok-free.dev"><meta name="cwnu-build" content="6e8f6626ab2a7d97b56e2cf497eb22e26a536fd2"><script type="application/json" id="student-site">{"api":"https://olive-finalize-bartender.ngrok-free.dev","document":"https://www.changwon.ac.kr/common/nttPdfView.do?fileKey=fd6e24ce242bc279a9e26b4daa77a1fc&rs=","excerpt":{"1":33,"2":34,"3":35,"4":36,"5":37,"6":38,"7":39,"8":40,"9":41,"10":42,"11":43,"12":44,"13":45,"14":259,"15":260,"16":261,"17":262,"18":263,"19":264}}</script><script src="./student-client-1297be1ee50b800a.js"></script></head><body><main>
+<header><h1>2026학년도 창원캠퍼스 교육과정</h1><a href="https://www.changwon.ac.kr/common/nttPdfView.do?fileKey=fd6e24ce242bc279a9e26b4daa77a1fc&amp;rs=" target="_blank" rel="noopener">원문 PDF</a></header>
+<section aria-label="교육과정 질문"><div id="archives"></div><div class="chat-tools"><button type="button" id="newRoom">새 대화</button></div><p id="roomNotice" class="turn-notice" role="status" hidden></p><div id="chatlog" aria-live="off"></div><form id="chat"><label for="q">교육과정 질문</label><textarea id="q" maxlength="3000" required></textarea><div class="bar"><span class="status" id="cs" role="status"></span><button id="send">질문하기</button></div></form></section>
+<details class="panel" id="auditPanel"><summary>컴퓨터공학과 학생용 · 엑셀로 이수요건 확인</summary><form id="upload">
+<div class="grid"><label>적용 교육과정 연도<input type="number" name="year" value="2026" min="2000" max="2100" required></label>
+<label>본인 주전공<select id="department" name="department" required><option value="" selected>선택해 주세요</option><option>컴퓨터공학과</option><option>다른 학과</option></select></label><label>이수 유형<select name="track"><option>단일전공</option><option>부전공</option><option>복수전공</option><option>연계전공</option><option>융합전공</option></select></label>
+<label>학생 유형<select name="admission"><option>일반</option><option>편입</option><option>전과</option><option>재입학</option></select></label>
+<label>엑셀 종류<select name="mode"><option value="list">이수 완료 과목 목록</option><option value="transcript">성적표</option></select></label></div>
+<label>학수번호 또는 과목명이 있는 엑셀 파일<input type="file" name="workbook" accept=".xlsx" required></label>
+<label class="check"><input type="checkbox" name="complete" checked> 전체 이수내역</label>
+<label class="check"><input type="checkbox" name="english_exempt"> 대학영어 이수면제 확인됨</label>
+<label class="check"><input type="checkbox" name="international"> 외국인 유학생</label>
+<div class="bar"><span class="status" id="us" role="status"></span><button id="runAudit">판정하기</button></div></form><div id="auditResult"></div></details>
+</main><script src="./answer-view-0dbe6c6209ad3d0a.js"></script><script>
+const el=id=>document.getElementById(id);
+let auditId=null, auditVersion=0, roomId=null, roomClosed=false;
+function requireNewRoom(message) {
+  roomClosed=true;
+  el('roomNotice').textContent=message;
+  el('roomNotice').hidden=false;
+  el('send').disabled=true;
+}
+function nextRoom() {
+  const log=el('chatlog');
+  if (log.childElementCount) {
+    const archive=add(el('archives'),'details');
+    add(archive,'summary','이전 대화 · '+(log.querySelector('h3')?.textContent||'').slice(0,48));
+    while (log.firstChild) archive.append(log.firstChild);
+  }
+  roomId=null; roomClosed=false;
+  el('roomNotice').hidden=true;el('roomNotice').textContent='';
+  el('cs').textContent='';el('send').disabled=false;
+}
+el('newRoom').onclick=()=>{
+  nextRoom();auditId=null;auditVersion++;
+  el('upload').reset();el('auditResult').replaceChildren();el('us').textContent='';
+  el('q').focus();
+};
+el('upload').addEventListener('change',()=>{
+  if(auditId) nextRoom();
+  auditId=null;auditVersion++;el('auditResult').replaceChildren();el('us').textContent='';
+});
+function add(parent,tag,text,cls){const n=document.createElement(tag);if(text!==undefined)n.textContent=text;if(cls)n.className=cls;parent.append(n);return n}
+function refs(parent,pages,interviews=[],doc='excerpt'){const r=add(parent,'div',undefined,'refs');for(const p of pages){const a=add(r,'a',(doc==='university-2026'?'원본 ':'발췌 ')+p+'쪽');a.href=studentSource(doc,p);a.target='_blank';a.rel='noopener'}if(interviews.length)add(r,'span','조교 인터뷰 '+interviews.join(', '))}
+function table(parent,headers,rows){const box=add(parent,'div',undefined,'scroll');const t=add(box,'table');const h=add(t,'tr');for(const c of headers)add(h,'th',c);for(const row of rows){const tr=add(t,'tr');for(const x of row)add(tr,'td',String(x??''))}}
+el('chat').onsubmit=async e=>{e.preventDefault();const question=el('q').value.trim();if(!question||roomClosed||el('send').disabled)return;
+el('send').disabled=true;el('newRoom').disabled=true;el('runAudit').disabled=true;
+const deadline=chatDeadline();
+const turn=add(el('chatlog'),'article',undefined,'turn');add(turn,'h3',question);const a=add(turn,'div','', 'answer');let pages=[],interviews=[],rows=[],documentId='excerpt',finished=false;
+try{const response=await studentApi('/api/chat',{method:'POST',signal:deadline.signal,headers:{'Content-Type':'application/json'},body:JSON.stringify({question,audit_id:auditId,conversation_id:roomId})});
+if(!response.ok){
+ const error=await response.json();const detail=error.detail;
+ if(detail&&['room_limit','room_expired','attachment_changed'].includes(detail.code))requireNewRoom(detail.message);
+ throw Error(typeof detail==='string'?detail:(detail?.message||'요청 실패 '+response.status));
+}
+el('q').value='';const reader=response.body.pipeThrough(new TextDecoderStream()).getReader();let buffer='';
+stream: while(true){const chunk=await reader.read();if(chunk.done)break;buffer+=chunk.value;let at;
+while((at=buffer.indexOf('\n\n'))!==-1){const lines=buffer.slice(0,at).split('\n');buffer=buffer.slice(at+2);const event=lines[0].slice(7);const data=JSON.parse(lines[1].slice(6));
+if(event==='conversation'){roomId=data.id}
+else if(event==='delta'){if(data.text.trim())deadline.bodyStarted();el('cs').textContent='답변 중';a.append(document.createTextNode(data.text))}
+else if(event==='status')el('cs').textContent=data.stage+' 중';
+else if(event==='sources'){pages=data.pages;interviews=data.interview_refs||[];documentId=data.document||'excerpt'}else if(event==='rows')rows=data.rows;
+else if(event==='done'){finished=true;renderCompletedAnswer(a);el('cs').textContent='답변 완료';
+ if(data.conversation?.can_continue===false)requireNewRoom('대화 길이 한도에 도달했습니다. 새 대화에서 이어서 질문해 주세요.');
+ break stream}else if(event==='error')throw Error(data.type==='DeadlineExceeded'?data.detail:data.stage+' 단계에서 응답을 마치지 못했습니다.')}}if(!finished)throw Error('응답 연결이 중단됐습니다.');
+refs(turn,pages,interviews,documentId);if(rows.length){const d=add(turn,'details');add(d,'summary','조회한 전체 목록 ('+rows.length+')');table(d,['쪽','항목'],rows.map(r=>[r.page,r.text]))}
+}catch(err){const msg=deadline.message||err.message;add(turn,'p',(a.textContent?'답변 중단 · ':'')+msg,'turn-notice');el('cs').textContent=roomClosed?'':'다시 질문할 수 있습니다.';
+}finally{
+ deadline.close();el('send').disabled=roomClosed;el('newRoom').disabled=false;el('runAudit').disabled=false;
+ if(roomClosed)el('newRoom').focus();else el('q').focus();
+}};
+const scopeNotice='개인 이수요건 판정은 컴퓨터공학과 학생이 이용할 수 있습니다. 모든 학과의 편람 기준은 채팅에서 확인할 수 있습니다.';
+el('department').onchange=()=>{const outside=el('department').value==='다른 학과';
+const input=el('upload').elements.workbook;input.disabled=outside;el('us').textContent=outside?scopeNotice:'';
+if(outside){input.value='';++auditVersion;if(auditId&&(roomId||roomClosed))nextRoom();auditId=null;el('auditResult').replaceChildren()}};
+el('upload').onsubmit=async e=>{e.preventDefault();const form=e.currentTarget;
+if(form.elements.department.value!=='컴퓨터공학과'){el('us').textContent=scopeNotice;return}
+const fd=new FormData(form);for(const k of ['complete','english_exempt','international'])fd.set(k,String(form.elements[k].checked));
+if(roomId||roomClosed)nextRoom();
+auditId=null;const version=++auditVersion;el('newRoom').disabled=true;el('runAudit').disabled=true;el('send').disabled=true;el('us').textContent='이수내역 확인 중';const box=el('auditResult');box.replaceChildren();
+try{const r=await studentApi('/api/audit',{method:'POST',body:fd});const data=await r.json();if(!r.ok)throw Error(typeof data.detail==='string'?data.detail:'입력을 확인해 주세요.');
+if(version!==auditVersion)return;auditId=data.audit_id;
+if(data.supported===false){el('us').textContent=scopeNotice;return}
+const coursework=data.coursework_status,cert=data.graduation_certification;
+add(box,'h3','학점·과목 이수요건 · '+coursework,coursework==='충족'?'ok':coursework==='미충족'?'fail':'review');
+add(box,'p',data.profile);add(box,'h3','졸업인증 · '+cert.status,'review');add(box,'p',cert.evidence);
+if(cert.pages.length)refs(box,cert.pages,[],cert.document);
+if(data.rules.length)table(box,['요건','판정','인정 / 필요','부족·확인 항목','원문'],data.rules.map(x=>[x.label,x.status,x.earned!=null?x.earned+' / '+x.required:'',x.missing_items?.join(', ')||[x.missing?x.missing+'학점':'',x.details].filter(Boolean).join(' · '),x.pages.join(', ')+'쪽']));
+if(data.issues.length){const d=add(box,'details');d.open=true;add(d,'summary','확인할 이수내역');table(d,['위치','과목','사유'],data.issues.map(x=>[x.row,x.course,x.reason]))}
+if(data.recognized.length){const d=add(box,'details');add(d,'summary','인정 과목 ('+data.recognized.length+')');table(d,['학수번호','과목','학점','구분'],data.recognized.map(x=>[x.code,x.name,x.credits,x.category]))}
+refs(box,data.pages,[],data.source_document);el('us').textContent='판정 완료'}catch(err){el('us').textContent=err.message}finally{el('runAudit').disabled=false;el('newRoom').disabled=false;el('send').disabled=roomClosed}};
+</script></body></html>

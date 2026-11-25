@@ -1,0 +1,12 @@
+<!doctype html>
+<html lang="ko"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>교육과정 원문</title><meta name="cwnu-api" content="https://olive-finalize-bartender.ngrok-free.dev"><meta name="cwnu-build" content="6e8f6626ab2a7d97b56e2cf497eb22e26a536fd2"><script type="application/json" id="student-site">{"api":"https://olive-finalize-bartender.ngrok-free.dev","document":"https://www.changwon.ac.kr/common/nttPdfView.do?fileKey=fd6e24ce242bc279a9e26b4daa77a1fc&rs=","excerpt":{"1":33,"2":34,"3":35,"4":36,"5":37,"6":38,"7":39,"8":40,"9":41,"10":42,"11":43,"12":44,"13":45,"14":259,"15":260,"16":261,"17":262,"18":263,"19":264}}</script><script src="./student-client-1297be1ee50b800a.js"></script></head>
+<body><p role="status">원문 PDF를 여는 중입니다.</p><script>
+(async () => {
+  const full = new URLSearchParams(location.search).get("document") === "full";
+  const result = await studentApi(full ? "/university-source.pdf" : "/source.pdf");
+  if (!result.ok || !result.headers.get("content-type")?.includes("application/pdf")) throw Error();
+  const fragment = /^#page=[1-9]\d*$/.test(location.hash) ? location.hash : "";
+  location.replace(URL.createObjectURL(await result.blob()) + fragment);
+})().catch(() => { document.querySelector("[role=status]").textContent = "원문을 열지 못했습니다. 잠시 후 다시 시도해 주세요."; });
+</script></body></html>
