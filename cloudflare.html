@@ -1,3 +1,16 @@
 <!doctype html><html lang="ko"><meta charset="utf-8"><title>창원캠퍼스 교육과정 챗봇</title>
-<meta name="referrer" content="no-referrer"><meta http-equiv="refresh" content="0;url=https://argument-hispanic-campaigns-bug.trycloudflare.com/">
-<a href="https://argument-hispanic-campaigns-bug.trycloudflare.com/">현재 공개 챗봇 열기</a></html>
+<meta name="referrer" content="no-referrer"><a id="current" href="https://argument-hispanic-campaigns-bug.trycloudflare.com/">현재 공개 챗봇 열기</a>
+<script>
+(async () => {
+  const link = document.getElementById("current");
+  try {
+    const source = new URL("./cloudflare-url.json", location.href);
+    source.searchParams.set("t", Date.now());
+    const response = await fetch(source, {cache: "no-store"});
+    if (response.ok) {
+      const {url} = await response.json();
+      if (/^https:\/\/[a-z0-9-]+\.trycloudflare\.com\/$/.test(url)) link.href = url;
+    }
+  } finally { location.replace(link.href); }
+})();
+</script></html>
